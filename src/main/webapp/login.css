@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #121212; /* Deep dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  line-height: 1.6;
+  color: #e0e0e0; /* Light gray text for contrast */
+}
+
+main {
+  background-color: #1e1e1e; /* Slightly lighter than pure black */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  padding: 50px; /* Increased padding */
+  width: 500px; /* Increased width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333; /* Subtle border */
+}
+
+main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+h3 {
+  color: white; /* Bright teal for contrast */
+  margin-bottom: 30px; /* Increased margin */
+  font-size: 2em; /* Slightly larger font */
+}
+
+table {
+  width: 100%;
+  margin-bottom: 30px; /* Increased margin */
+}
+
+table td {
+  padding: 15px 0; /* Increased padding */
+  text-align: left;
+}
+
+table td:first-child {
+  width: 30%;
+  font-weight: bold;
+  color: white; /* Same teal for labels */
+}
+
+select, input {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  background-color: #2c2c2c; /* Dark input background */
+  color: #e0e0e0; /* Light text */
+  border: 1px solid #444;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 5px; /* Added slight margin between label and input */
+}
+
+select, input::placeholder {
+  color: #888; /* Muted placeholder text */
+}
+
+select:focus, input:focus {
+  outline: none;
+  border-color:white; /* Teal accent */
+  box-shadow: 0 0 8px rgba(78, 205, 196, 0.3);
+}
+
+#captchaImage {
+  max-width: 250px; /* Slightly wider captcha */
+  margin: 20px 0; /* Increased margin */
+  border: 1px solid #444;
+  border-radius: 8px;
+  filter: brightness(0.9); /* Slightly darkened */
+}
+
+button {
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  background-color: #4ecdc4; /* Teal button */
+  color: #121212; /* Dark text on light button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px; /* Added margin above button */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #45b7aa; /* Slightly darker teal */
+  transform: translateY(-2px);
+}
+
+a {
+  color: white; /* Teal link */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #45b7aa;
+  text-decoration: underline;
+}
+
+#validationResult {
+  margin-top: 20px; /* Increased margin */
+  font-weight: bold;
+  color: #ff6b6b; /* Bright red for validation messages */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  main {
+    width: 95%;
+    margin: 0 10px;
+    padding: 30px; /* Reduced padding for small screens */
+  }
+
+  table td {
+    display: block;
+    text-align: center;
+  }
+
+  table td:first-child {
+    margin-bottom: 5px;
+  }
+}

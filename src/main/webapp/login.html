@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - StudentSync</title>
+  <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+<main>
+  <h3>Welcome to StudentSync</h3>
+  <table>
+    <tr>
+      <td>User Type</td>
+      <td>
+        <select id="userType">
+          <option value="students">Student</option>
+          <!--<option value="company">Company</option>
+          <option value="admin">Admin</option> -->
+          <option value="university">University</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Username</td>
+      <td> <input type="text" id="username" placeholder="Enter your username" /> </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td> <input type="password" id="password" placeholder="Enter your password" /> </td>
+    </tr>
+  </table>
+
+  <button onclick="login()">Login</button>
+
+  <p>If you are a new user, click <a href="registration.html">here</a> to register.</p>
+  <p id="validationResult"></p>
+</main>
+
+<script src="login.js"></script>
+</body>
+</html>

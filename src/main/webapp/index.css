@@ -1,0 +1,17 @@
+#hero {
+  width: 100%;
+  height: 80vh;
+  background-color: #37517e; /* Add your desired background color */
+  background-image: url("https://img.freepik.com/free-photo/beautiful-snowman-winter-landscape_23-2151904352.jpg?t=st=1733418084~exp=1733421684~hmac=4f3c613c82b3a6cd6dfb67389e6ebdea008ae04c569d7c5b98031fb5199d887f&w=1800") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  color: black;
+  position: relative;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Job</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="admin.html">Admin Dashboard</a></li>
+        <li><a href="add-job.html">Add Job</a></li>
+        <li><a href="index.html">Logout</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <h1 class="dashboard-title">Add Job</h1>
+
+    <form id="addJobForm">
+        <label for="title">Job Title:</label>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <label for="salary">Salary:</label>
+        <input type="text" id="salary" name="salary" required><br>
+
+        <button type="submit">Add Job</button>
+    </form>
+</div>
+
+<script src="add-job.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+    <link rel="stylesheet" type="text/css" href="jobapplications.css">
+</head>
+<body>
+	<nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobapplications.html">Job Profiles</a></li>
+            <li><a href="#">My Profile</a></li>
+            <li><a href="resumeupload.html">Resume</a></li>
+            <li><a href="index.html">Logout</a></li>
+
+
+            
+        </ul>
+    </nav>
+    <ul id="jobList"></ul>
+    
+    <script>
+        function getAllJobPostings() {
+            var url = "http://localhost:8080/jobs/all";
+
+            callApi("GET", url, null, displayJobPostings);
+        }
+
+        function displayJobPostings(response) {
+            var jobList = JSON.parse(response);
+
+            var jobListElement = document.getElementById("jobList");
+            jobListElement.innerHTML = "";
+
+            for (var i = 0; i < jobList.length; i++) {
+                var job = jobList[i];
+                var listItem = document.createElement("li");
+                var applyButton = document.createElement("button");
+                applyButton.textContent = "Apply";
+                applyButton.className = "apply-button";
+                applyButton.addEventListener("click", function() {
+                    // Implement your apply button functionality here
+                    // You can use job.id or job information to identify the job and perform an action
+                    alert("You clicked Apply for job: " + job.jobname);
+                });
+
+                listItem.textContent = "Job Name: " + job.jobname + ", Location: " + job.joblocation + ", Description: " + job.jobdrecption;
+                listItem.appendChild(applyButton);
+                jobListElement.appendChild(listItem);
+            }
+        }
+
+        function callApi(METHOD, URL, DATA, SUCCESS) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open(METHOD, URL, true);
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        SUCCESS(this.responseText);
+                    } else {
+                        alert("HTTP status " + this.status + ": Service unavailable");
+                    }
+                }
+            };
+
+            if (METHOD === "POST") {
+                xhttp.setRequestHeader('Content-Type', 'application/json');
+            }
+
+            xhttp.send(DATA);
+        }
+
+
+        window.onload = getAllJobPostings;
+    </script>
+</body>
+</html>

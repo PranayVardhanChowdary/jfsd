@@ -1,0 +1,69 @@
+
+nav {
+    background-color: #37517e; 
+    color: #fff; 
+    padding: 8px;
+    border-radius: 15px;
+}
+
+/* Style the list of navigation items */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style each navigation item (list item) */
+nav li {
+    display: inline; /* Display navigation items in a horizontal line */
+    margin-right: 50px; /* Add some space between navigation items */
+}
+
+/* Style the anchor links within the navigation items */
+nav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Text color for links */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style the Logout button */
+#logoutButton {
+    background-color:transparent; /* Background color for the Logout button */
+    color: #fff; /* Text color for the Logout button */
+    border: none; /* Remove the button border */
+    padding: 0; /* Add padding to the button */
+    cursor: pointer; /* Change cursor on hover to indicate it's clickable */
+}
+
+/* Style the job listings */
+#jobList {
+    list-style: none; /* Remove the list-style bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+#jobList li {
+    display: flex; /* Display the job listing content in a row */
+    align-items: center; /* Center vertically within each job listing */
+    margin: 10px 0; /* Add some spacing between job listings */
+    padding: 10px; /* Add padding within each job listing */
+    background-color: #f4f4f4; /* Background color for job listings */
+    border: 1px solid #ccc; /* Add a border around each job listing */
+    border-radius: 15px; /* Rounded corners for the job listing container */
+}
+
+/* Style the Apply button within job listings */
+.apply-button {
+    background-color: #008CBA; /* Background color for the Apply button */
+    color: #fff; /* Text color for the Apply button */
+    border: none; /* Remove the button border */
+    padding: 5px 10px; /* Add padding to the button */
+    cursor: pointer; /* Change cursor on hover to indicate it's clickable */
+    border-radius: 15px;
+    margin: 20px; /* Push the Apply button to the right */
+}
+
+/* Style the job listing text content */
+#jobList li p {
+    margin: 5px 0; /* Add spacing between job details */
+    flex: 1; /* Allow the text content to take up available space */
+    text-align: center; /* Center align the text content horizontally */
+}
