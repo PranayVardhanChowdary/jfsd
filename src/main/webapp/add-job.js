@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const description = document.getElementById('description').value;
         const salary = document.getElementById('salary').value;
 
-        fetch('http://localhost:8080/jobs/save', {
+        fetch('https://jfsd-production-f744.up.railway.app/jobs/save', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

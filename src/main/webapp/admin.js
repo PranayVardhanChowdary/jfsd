@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Fetch the list of students
-    fetch('http://localhost:8080/person/all')
+    fetch('https://jfsd-production-f744.up.railway.app/person/all')
         .then(response => response.json())
         .then(data => {
             const studentCount = document.getElementById('studentCount');
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error('Error fetching students:', error));
 
     // Fetch the list of jobs
-    fetch('http://localhost:8080/jobs/all')
+    fetch('https://jfsd-production-f744.up.railway.app/jobs/all')
         .then(response => response.json())
         .then(data => {
             const jobCount = document.getElementById('jobCount');

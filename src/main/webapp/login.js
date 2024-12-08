@@ -22,7 +22,7 @@ function callApi(METHOD, URL, DATA, SUCCESS) {
 }
 
 function login() {
-    var url = "http://localhost:8080/person/login";
+    var url = "https://jfsd-production-f744.up.railway.app/person/login";
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     var userType = document.getElementById("userType").value;

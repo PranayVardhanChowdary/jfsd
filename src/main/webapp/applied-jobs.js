@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Fetch applied job IDs and then fetch job details
-    fetch(`http://localhost:8080/jobs/applied/${username}`)
+    fetch(`https://jfsd-production-f744.up.railway.app/jobs/applied/${username}`)
         .then(response => response.json())
         .then(appliedJobIds => {
             // Fetch job details for each applied job ID
             const jobDetailsPromises = appliedJobIds.map(jobId =>
-                fetch(`http://localhost:8080/jobs/${jobId}`).then(response => response.json())
+                fetch(`https://jfsd-production-f744.up.railway.app/jobs/${jobId}`).then(response => response.json())
             );
 
             return Promise.all(jobDetailsPromises);

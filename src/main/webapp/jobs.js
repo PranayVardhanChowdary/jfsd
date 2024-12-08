@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch job listings and applied jobs from the server
     Promise.all([
-        fetch('http://localhost:8080/jobs/all').then(response => response.json()),
-        fetch(`http://localhost:8080/jobs/applied/${username}`).then(response => response.json())
+        fetch('https://jfsd-production-f744.up.railway.app/all').then(response => response.json()),
+        fetch(`https://jfsd-production-f744.up.railway.app/jobs/applied/${username}`).then(response => response.json())
     ])
     .then(([jobs, appliedJobIds]) => {
         const jobListings = document.getElementById('job-listings');

@@ -36,7 +36,7 @@ function addJob() {
     var jsonData = JSON.stringify(jobData);
 
     // Define the API URL where your microservice is hosted
-    var apiUrl = 'http://localhost:8080/jobs/save'; // Replace with your actual API URL
+    var apiUrl = 'https://jfsd-production-f744.up.railway.app/jobs/save'; // Replace with your actual API URL
 
     // Make a POST request to the microservice
     callApi('POST', apiUrl, jsonData, function (response) {

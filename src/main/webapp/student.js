@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         formData.append('file', file);
         formData.append('username', username);
 
-        fetch('http://localhost:8080/api/files/upload', {
+        fetch('https://jfsd-production-f744.up.railway.app/api/files/upload', {
             method: 'POST',
             body: formData
         })
